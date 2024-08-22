@@ -1,5 +1,12 @@
 const enviar = document.querySelector('#enviar')
 
+function formataPreco(valor) {
+  let preco = valor.toString().split('').reverse().join('').replace('.', '')
+  preco = preco.replace(/(\d{2})/, '$1,')
+  preco = preco.replace(/(\d{3}(?!$))/g, '$1.')
+  return preco.split('').reverse().join('')
+}
+
 function limparCampos() {
   document.querySelector('#qtdeFolhas').value = ''
   document.querySelector('#qtdeApostilas').value = ''
@@ -37,7 +44,7 @@ enviar.addEventListener('click', (event) => {
 
   const encadernacaoCalculada = (valorApostila * parseFloat(qtdeApostilas))
 
-  display.innerHTML = `R$${encadernacaoCalculada.toFixed(2).replace('.', ',')}`
+  display.innerHTML = `R$${formataPreco(encadernacaoCalculada * 100)}`
 
   limparCampos()
 })
