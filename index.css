@@ -1,0 +1,81 @@
+:root {
+  --color01: #F0F7F4;
+  --color02: #A2E3C4;
+  --color03: #B3BFB8;
+  --color04: #7E8D85;
+  --color05: #3C493F;
+}
+
+body {
+  background: linear-gradient(to right, var(--color05), var(--color04));
+  color: var(--color01);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.4rem;
+}
+
+hr {
+  background-color: var(--color03);
+  border: none;
+  color: var(--color03);
+  margin: 1rem;
+  width: 90%;
+  height: 0.26rem;
+  margin: 2rem;
+
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bloco {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.bloco input,
+.bloco select,
+.bloco .enviar {
+  border: none;
+  box-shadow: 5px 5px 10px var(--color05);
+  color: var(--color05);
+  font-size: 1.4rem;
+  padding: 0.6rem 0;
+  text-align: center;
+  width: 400px;
+}
+
+.bloco .enviar {
+  border-radius: 10px;
+  width: 300px;
+}
+
+.enviar:hover {
+  background-color: var(--color04);
+  color: var(--color02);
+  transition: 0.2s;
+}
+
+.enviar:active {
+  background-color: var(--color02);
+  color: var(--color04);
+}
+
+.resultado {
+  align-items: baseline;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.display {
+  font-size: 1.8rem;
+  font-weight: bold;
+}

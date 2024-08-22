@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Calculadora de Encadernações</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Calculadora de Encadernações</h1>
+    <hr>
+    <form>
+      <div class="bloco">
+        <label for="qtdeFolhas">Qtde de folhas:</label>
+        <input type="number" id="qtdeFolhas" class="qtdeFolhas" required>
+      </div>
+      <div class="bloco">
+        <label for="corImpressao">Cor da Impressão:</label>
+        <select name="corImpressao" id="corImpressao" class="corImpressao" required>
+          <option value="monocromatrico">Monocromático</option>
+          <option value="colorido">Colorido</option>
+        </select>
+      </div>
+      <div class="bloco">
+        <label for="frenteVerso">Frente e Verso:</label>
+        <select name="frenteVerso" id="frenteVerso" class="frenteVerso" required>
+          <option value="frente">Apenas Frente</option>
+          <option value="frenteverso">Frente e Verso</option>
+        </select>
+      </div>
+      <div class="bloco">
+        <label for="qtdeApostilas">Qtde de Apostilas:</label>
+        <input type="number" id="qtdeApostilas" class="qtdeApostilas" required>
+      </div>
+      <div class="bloco">
+        <button id="enviar" class="enviar">Calcular</button>
+      </div>
+    </form>
+    <hr>
+    <div class="resultado">
+      <div class="display">
+        <h3>Resultado:</h3>
+      </div>
+      <div class="display">
+        <p id="display">R$00,00</p>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
