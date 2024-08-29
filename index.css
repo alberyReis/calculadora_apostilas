@@ -28,7 +28,6 @@ hr {
   width: 90%;
   height: 0.26rem;
   margin: 1.6rem;
-
 }
 
 .container {
@@ -106,17 +105,11 @@ hr {
   body {
     font-size: 1rem;
   }
-<<<<<<< HEAD
 
   h1 {
     font-size: 2rem;
     padding: 0 1rem;
     text-align: center;
-=======
-  h1 {
-    text-align: center;
-    font-size: 2rem;
->>>>>>> 9e11d71f5971c475f8a00dd05ae8cc1c801b4ed0
   }
 
   .bloco {
@@ -127,10 +120,7 @@ hr {
   .bloco select,
   .bloco .enviar {
     font-size: 1rem;
-<<<<<<< HEAD
     padding: 0.7rem 0;
-=======
->>>>>>> 9e11d71f5971c475f8a00dd05ae8cc1c801b4ed0
     width: 80vw;
   }
 
@@ -145,12 +135,8 @@ hr {
     margin-bottom: 1.2rem;
   }
 
-<<<<<<< HEAD
   .display h3,
   .display p {
-=======
-  .display h3, .display p {
->>>>>>> 9e11d71f5971c475f8a00dd05ae8cc1c801b4ed0
     font-size: 1.4rem;
     margin: 0.4rem;
   }
