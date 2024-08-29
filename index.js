@@ -15,22 +15,41 @@ function limparCampos() {
 enviar.addEventListener('click', (event) => {
   event.preventDefault()
 
-  let valorFolhas = 1
-  let valorCor = 2
-  let valorFrenteVerso = 2
+  let valorFolhas = 0.69
+  let valorEspiral = 1.78
 
   const qtdeFolhas = document.querySelector('#qtdeFolhas').value
+  const espiral = document.querySelector('#espiral').value
   const corImpressao = document.querySelector('#corImpressao').value
   const frenteVerso = document.querySelector('#frenteVerso').value
   const qtdeApostilas = document.querySelector('#qtdeApostilas').value
-  const display = document.querySelector('#display')
+  const displayPreco = document.querySelector('#displayPreco')
+  const displayLucro = document.querySelector('#displayLucro')
 
   if (corImpressao === 'colorido') {
-    valorCor = 4
+    valorFolhas = 0.75
   }
 
   if (frenteVerso === 'frenteverso') {
-    valorFrenteVerso = 4
+    valorFolhas *= 2
+  }
+
+  if (espiral === 'espiral9mm') {
+    valorEspiral = 1.81
+  } else if (espiral === 'espiral12mm') {
+    valorEspiral = 1.82
+  } else if (espiral === 'espiral14mm') {
+    valorEspiral = 2.02
+  } else if (espiral === 'espiral17mm') {
+    valorEspiral = 2.11
+  } else if (espiral === 'espiral25mm') {
+    valorEspiral = 2.74
+  } else if (espiral === 'espiral29mm') {
+    valorEspiral = 3.08
+  } else if (espiral === 'espiral33mm') {
+    valorEspiral = 3.75
+  } else if (espiral === 'espiral40mm') {
+    valorEspiral = 4.88
   }
 
   if (valorFolhas === '' || qtdeApostilas === '') {
@@ -40,11 +59,13 @@ enviar.addEventListener('click', (event) => {
     return
   }
 
-  const valorApostila = (valorFolhas * parseFloat(qtdeFolhas)) + valorCor + valorFrenteVerso
+  const valorApostila = (valorFolhas * parseFloat(qtdeFolhas)) + valorEspiral
+  const encadernacaoCalculada = ((valorApostila * parseFloat(qtdeApostilas)) * 100)
+  const lucro = formataPreco(encadernacaoCalculada)
+  const preco = formataPreco(encadernacaoCalculada * 2)
 
-  const encadernacaoCalculada = (valorApostila * parseFloat(qtdeApostilas))
-
-  display.innerHTML = `R$${formataPreco(encadernacaoCalculada * 100)}`
+  displayPreco.innerHTML = `R$${preco}`
+  displayLucro.innerHTML = `R$${lucro}`
 
   limparCampos()
 })

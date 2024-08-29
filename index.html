@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
-  <title>Calculadora de Encadernações</title>
+  <title>Calculadora de Apostilas</title>
 </head>
 
 <body>
@@ -16,6 +16,20 @@
       <div class="bloco">
         <label for="qtdeFolhas">Qtde de folhas:</label>
         <input type="number" id="qtdeFolhas" class="qtdeFolhas" required>
+      </div>
+      <div class="bloco">
+        <label for="espiral">Espiral:</label>
+        <select name="espiral" id="espiral" class="espiral" required>
+          <option value="espiral7mm">Epiral 7mm</option>
+          <option value="espiral9mm">Epiral 9mm</option>
+          <option value="espiral12mm">Epiral 12mm</option>
+          <option value="espiral14mm">Epiral 14mm</option>
+          <option value="espiral17mm">Epiral 17mm</option>
+          <option value="espiral25mm">Epiral 25mm</option>
+          <option value="espiral29mm">Epiral 29mm</option>
+          <option value="espiral33mm">Epiral 33mm</option>
+          <option value="espiral40mm">Epiral 40mm</option>
+        </select>
       </div>
       <div class="bloco">
         <label for="corImpressao">Cor da Impressão:</label>
@@ -40,12 +54,22 @@
       </div>
     </form>
     <hr>
-    <div class="resultado">
-      <div class="display">
-        <h3>Resultado:</h3>
+    <div class="displayContainer">
+      <div class="resultado">
+        <div class="display">
+          <h3 class="verde">Preço:</h3>
+        </div>
+        <div class="display">
+          <p id="displayPreco">R$00,00</p>
+        </div>
       </div>
-      <div class="display">
-        <p id="display">R$00,00</p>
+      <div class="resultado">
+        <div class="display">
+          <h3 class="azul">Lucro:</h3>
+        </div>
+        <div class="display">
+          <p id="displayLucro">R$00,00</p>
+        </div>
       </div>
     </div>
   </div>
