@@ -11,6 +11,8 @@ body {
   color: var(--color01);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1.4rem;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -98,4 +100,45 @@ hr {
 .display .azul {
   color: #042940;
   text-shadow: 2px 2px 6px var(--color05);
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .bloco {
+    width: 100vw;
+  }
+
+  .bloco input,
+  .bloco select,
+  .bloco .enviar {
+    font-size: 1rem;
+    padding: 0.7rem 0;
+    width: 80vw;
+  }
+
+  .bloco .enviar {
+    font-size: 1rem;
+    width: 80vw;
+  }
+
+  .displayContainer {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 1.2rem;
+  }
+
+  .display h3,
+  .display p {
+    font-size: 1.4rem;
+    margin: 0.4rem;
+  }
 }

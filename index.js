@@ -1,12 +1,5 @@
 const enviar = document.querySelector('#enviar')
 
-function formataPreco(valor) {
-  let preco = valor.toString().split('').reverse().join('').replace('.', '')
-  preco = preco.replace(/(\d{2})/, '$1,')
-  preco = preco.replace(/(\d{3}(?!$))/g, '$1.')
-  return preco.split('').reverse().join('')
-}
-
 function limparCampos() {
   document.querySelector('#qtdeFolhas').value = ''
   document.querySelector('#qtdeApostilas').value = ''
@@ -60,9 +53,9 @@ enviar.addEventListener('click', (event) => {
   }
 
   const valorApostila = (valorFolhas * parseFloat(qtdeFolhas)) + valorEspiral
-  const encadernacaoCalculada = ((valorApostila * parseFloat(qtdeApostilas)) * 100)
-  const lucro = formataPreco(encadernacaoCalculada)
-  const preco = formataPreco(encadernacaoCalculada * 2)
+  const encadernacaoCalculada = (valorApostila * parseFloat(qtdeApostilas))
+  const lucro = encadernacaoCalculada.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+  const preco = (encadernacaoCalculada * 2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
 
   displayPreco.innerHTML = `R$${preco}`
   displayLucro.innerHTML = `R$${lucro}`
