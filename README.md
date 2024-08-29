@@ -15,5 +15,5 @@ Link:
 
 Site:
 
-![](https://github.com/alberyReis/portifolio_pessoal/blob/master/assets/img/portifolio_albery.png)# calculadora_encadernacao
+![](https://github.com/alberyReis/portifolio_pessoal/blob/master/assets/img/calculadora_apostila_large.png)
  
