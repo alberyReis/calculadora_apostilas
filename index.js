@@ -10,6 +10,7 @@ enviar.addEventListener('click', (event) => {
 
   let valorFolhas = 0.69
   let valorEspiral = 1.78
+  const valorCapa = 1.50
 
   const qtdeFolhas = document.querySelector('#qtdeFolhas').value
   const espiral = document.querySelector('#espiral').value
@@ -52,7 +53,7 @@ enviar.addEventListener('click', (event) => {
     return
   }
 
-  const valorApostila = (valorFolhas * parseFloat(qtdeFolhas)) + valorEspiral
+  const valorApostila = (valorFolhas * parseFloat(qtdeFolhas)) + valorEspiral + valorCapa
   const encadernacaoCalculada = (valorApostila * parseFloat(qtdeApostilas))
   const lucro = encadernacaoCalculada.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
   const preco = (encadernacaoCalculada * 2).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
