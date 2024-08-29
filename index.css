@@ -17,7 +17,7 @@ body {
 
 h1 {
   font-size: 2.6rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
   text-shadow: 2px 2px 6px var(--color05);
 }
 
@@ -109,6 +109,7 @@ hr {
 
   h1 {
     font-size: 2rem;
+    margin-top: 2rem;
     padding: 0 1rem;
     text-align: center;
   }
